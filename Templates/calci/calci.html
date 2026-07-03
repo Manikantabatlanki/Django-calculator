@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>my calculator</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="">
+            value1
+            <input type="text" name="t1">
+        </label><br><br>
+        <label for="">
+            value2
+            <input type="text" name="t2">
+        </label><br><br>
+        <input type="submit" value="ADD" name="add">
+        <input type="submit" value="SUB" name="sub">
+        <input type="submit" value="MULTI" name="multi">
+        <input type="submit" value="DIV" name="div">
+    </form>
+    {{ result }}
+</body>
+</html>
+

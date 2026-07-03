@@ -1,0 +1,17 @@
+{% extends 'base2.html' %}
+
+{% block main %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="">
+            value1
+            <input type="text" name="t1">
+        </label><br><br>
+        <label for="">
+            value2
+            <input type="text" name="t2">
+        </label><br><br>
+        <input type="submit" value="Multi">
+    </form>
+    <p>{{result}}</p>
+{% endblock %}

@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% block main %}
+
+<style>
+    body{
+        background:#ffffff3e;
+        font-family:Arial, sans-serif;
+    }
+
+    .calculator{
+        width:320px;
+        margin:60px auto;
+        background:#222;
+        padding:20px;
+        border-radius:15px;
+        box-shadow:0 0 20px rgba(0,0,0,0.3);
+    }
+
+    .calculator h2{
+        color:white;
+        text-align:center;
+        margin-bottom:20px;
+    }
+
+    .calculator input[type="text"]{
+        width:100%;
+        padding:12px;
+        margin-bottom:15px;
+        font-size:18px;
+        border:none;
+        border-radius:8px;
+        outline:none;
+        box-sizing:border-box;
+    }
+
+    .buttons{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .buttons input{
+        padding:15px;
+        font-size:18px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        background:#ff9800;
+        color:white;
+        font-weight:bold;
+    }
+
+    .buttons input:hover{
+        background:#e68900;
+    }
+
+    .result{
+        margin-top:20px;
+        background:white;
+        padding:12px;
+        border-radius:8px;
+        text-align:center;
+        font-size:20px;
+        font-weight:bold;
+    }
+</style>
+
+<div class="calculator">
+    <h2>Calculator</h2>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <input type="text" name="t1" placeholder="Enter First Number">
+
+        <input type="text" name="t2" placeholder="Enter Second Number">
+
+        <div class="buttons">
+            <input type="submit" value="+" name="add">
+            <input type="submit" value="-" name="sub">
+            <input type="submit" value="×" name="multi">
+            <input type="submit" value="÷" name="div">
+        </div>
+    </form>
+
+    <div class="result">
+        Result : {{ result }}
+    </div>
+</div>
+
+{% endblock %}

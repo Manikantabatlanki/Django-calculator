@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="">
+            employee number
+            <input type="text" name="eno">
+        </label><br><br>
+        <label>
+            employee name
+            <input type="text" name="ename">
+        </label><br><br>
+        <lable>
+            employee salary
+            <input type="text" name="esal">
+        </lable><br><br>
+        <label for="">
+            Department
+            <select>
+                {% for dept in department %}
+                    <option value="">{{dept.deptname}}</option>
+                {% endfor %}
+            </select>
+        </label><br><br>
+        <label for="">
+            profile pic
+            <input type="file" name="epic">
+        </label><br><br>
+        <input type="submit" value="insert">
+    </form>
+    {% if employee %}
+       <p>{{employee.empname}} has inserted</p>
+    {% endif %}
+    {% endblock %}

@@ -1,0 +1,7 @@
+{% extends 'base2.html' %}
+
+{% block main %}
+    {% for i in object_list %}
+        <p>{{i.empname}}</p>
+    {% endfor %}
+{% endblock %}

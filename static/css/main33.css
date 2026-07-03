@@ -1,0 +1,41 @@
+           *{
+                padding:0%;
+                margin: 0%;
+            }
+            header{
+                height: 12vh;
+                background-color: blue;
+                color: white;
+                text-align: center;
+            }
+            main{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+            }
+            h1{
+                padding: 0px;
+                margin: 0px;
+            }
+            main .box input[type=submit] {
+                width: 10vw;
+                height: 7vh;
+                background-color: red;
+                color: white;
+                border: none;
+                font-size: large;
+            }
+            main.box{
+                margin-top: 30px;
+            }
+            l1{
+                margin-top: 80px;
+            }
+            header.logout{
+                float: right;
+                color: white;
+            }
+            header.logoutt{
+                float: right;
+                color: white;
+            }

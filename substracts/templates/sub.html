@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                padding: 0%;
+                margin: 0%;
+            }
+            header{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                background-color: blue;
+                color: white;
+            }
+            .box{
+                text-align: center;
+                
+            }
+        </style>
+
+    </head>
+    <body>
+        <header>
+            <h1>Subtracting calculator</h1>
+        </header><br><br>
+        <main class="box">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <label for="">
+                    value1
+                    <input type="text" name="t1">
+                </label><br><br>
+                <label>
+                    value2
+                    <input type="text" name="t2">
+                </label><br><br>
+                <input type="submit">
+            </form><br><br>
+            {% if res %}
+                <h1>{{res}}</h1>
+            {% endif %}
+        </main>
+    </body>
+</html>

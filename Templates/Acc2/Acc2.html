@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="m1">Mani</button>
+    <button id="m2">Rajesh</button>
+    <button id="m3">Ravana</button>
+
+    <script>
+        let btn1,btn2,btn3;
+        btn1=document.getElementById('m1').addEventListener('click',display)
+        btn2=document.getElementById('m2').addEventListener('click',display)
+        btn3=document.getElementById('m3').addEventListener('click',display)
+
+        function display(event){
+            if(event.target.innerText=='Mani'){
+                document.body.style.backgroundColor='Blue'
+            }
+            else if(event.target.innerText=='Rajesh'){
+                document.body.style.backgroundColor='Red'
+            }
+            else{
+                document.body.style.backgroundColor='Green'
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                padding: 0%;
+                justify-content:center;
+                text-align: center;
+            }
+            header{
+                background-color: blue;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Even or Odd finder</h1>
+        </header>
+        <main>
+            <form method="POST">
+                {% csrf_token %}
+                <label for="">
+                    value
+                    <input type="text" name="t1">
+                </label><br><br>
+                <input type="submit">
+            </form>
+            {% if result %}
+                <h3>{{ result }}</h3>
+            {% endif %}
+    </body>
+</html>

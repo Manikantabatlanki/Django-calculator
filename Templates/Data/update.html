@@ -1,0 +1,31 @@
+{% extends 'base1.html' %}
+
+{% block main %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="">
+            EMployee Id
+            <input type="text" value="{{employee.empid}}" name="eid">
+        </label><br><br>
+        <label for="">
+            Employee name
+            <input type="text" value="{{employee.empname}}" name="ename">
+        </label><br><br>
+        <label for="">
+            salary
+            <input type="text" value="{{employee.salary}}" name="esal">
+        </label><br><br>
+        <label for="">
+            Department
+            <select name="dept" id="">
+                {% for dept in departments %}
+                   <option value="{{dept.deptid}}">{{dept.deptname}}</option>
+                {% endfor %}
+            </select>
+        </label><br><br>
+        <input type="submit" value="Update">
+    </form>
+    {% for msg in messages %}
+          <p>{{msg}}</p>
+    {% endfor %}
+{% endblock %}

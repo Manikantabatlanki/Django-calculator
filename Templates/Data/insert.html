@@ -1,0 +1,29 @@
+{% extends 'base1.html' %}
+
+{% block main %}
+    <form action="" method="post">
+        {% csrf_token %}
+       <label for="">
+        empid
+        <input type="text" name="eid">
+       </label><br><br>
+       <label for="">
+        empname
+        <input type="text" name="ename">
+       </label><br><br>
+       <label for="">
+        salary
+        <input type="text" name="esal">
+       </label><br><br>
+       <label for="">
+        Department
+        <select name="dept" id="">
+            {% for dept in department %}
+                <option value="{{dept.deptid}}">{{dept.deptname}}</option>
+            {% endfor %}
+        </select>
+       </label><br><br>
+       <input type="submit" value="insert">
+    </form>
+    
+{% endblock %}

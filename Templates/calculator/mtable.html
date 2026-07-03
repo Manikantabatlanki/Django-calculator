@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block newcss %}
+     <link rel="stylesheet" href="{% static 'css/mtable.css' %}">
+{% endblock %}
+{% block main %}
+    <form action="" method="post">
+        {% csrf_token %}
+    <label for="">
+        <input type="text" name="t1">
+        <input type="submit" value="generate"> 
+    </label>
+    </form>
+    {% for st in output %}
+    <p>{{st}}</p>
+    {% endfor %}
+{% endblock %}

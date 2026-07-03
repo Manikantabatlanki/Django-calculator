@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block main %}
+      <form action="" method="post">
+        {% csrf_token %}
+        <p>do you really want to delete {{employe.empname}}??</p>
+        <input type="submit" value="confirm">
+      </form>
+{% endblock %}

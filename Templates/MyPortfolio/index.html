@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'MyPortfolio/style.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght400;600;700&display=swap">
+</head>
+<body>
+    <header>
+        <img src="{% static 'Myportfolio/pic.jpeg' %}" alt="Profile Image" class="pic">
+        <h1>Venkata Manikanta Batlanki</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#project">Projects</a>
+            <a href="#certification">Certification</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="about-section" class="reveal" id="about">
+       <div class="about-card">
+
+          <div class="about-left">
+                <h2>About Me</h2>
+                <h3>Python Full Stack Developer</h3>
+
+                <p>
+                    Aspiring Python Full Stack developer with hands-on experience in building scalable web applications using Django, React.js, and REST APIs. 
+                    Focused on clean architecture, performance optimization, and delivering modern user experiences.
+                </p>
+          </div>
+
+        <div class="about-right">
+        <div class="tag">Python & Django</div>
+        <div class="tag">React.js & JavaScript</div>
+        <div class="tag">REST API Development</div>
+        <div class="tag">Database Design</div>
+      </div>
+
+    </div>
+    </section>
+    <section id="education" class="reveal">
+        <h2 class="section-title">🎓 Education</h2>
+
+        <div class="edu-container">
+
+            <div class="edu-card">
+                <div class="inner-box">
+                    <h3>Bachelor of Technology (B.Tech)</h3>
+                    <p class="college">Sri Vasavi Institute of Engineering and Technology</p>
+                    <p>Electronics and Communication Engineering (ECE)</p>
+                    <span class="edu-year">2021 – 2025 | CGPA: 7.28</span>
+                </div>
+            </div>
+
+            <div class="edu-card">
+                <div  class="inner-box">
+                    <h3>Intermediate</h3>
+                    <p class="college">Sri Vijayanandha Junior College</p>
+                    <p>MPC (Maths, Physics, Chemistry)</p>
+                    <span class="edu-year">2019 – 2021 | 80%</span>
+                </div>
+            </div>
+
+            <div class="edu-card">
+                <div class="inner-box">
+                    <h3>SSC</h3>
+                    <p class="college">Sri Sai Baba High School | 80%</p>
+                    <span class="edu-year">2018 – 2019 | 80%</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="skills-section" class="reveal" id="skills">
+        <h2>Technical Skills</h2>
+
+        <div class="skills-container">
+
+            
+            <div class="skill-card">
+            <h3>Backend</h3>
+            <div class="skill-items">
+                <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"> Python</span>
+                <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"> Django</span>
+                <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"> REST API</span>
+            </div>
+            </div>
+
+            
+            <div class="skill-card">
+            <h3>Frontend</h3>
+            <div class="skill-items">
+                <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"> HTML</span>
+                <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"> CSS</span>
+                <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"> JavaScript</span>
+                <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"> React.js</span>
+                <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"> Bootstrap</span>
+            </div>
+            </div>
+
+            
+            <div class="skill-card">
+            <h3>Database</h3>
+            <div class="skill-items">
+                <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"> MySQL</span>
+                <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"> MongoDB</span>
+                <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg"> PL/SQL</span>
+            </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="projects-section" class="reveal" id="project">
+    <h2>🚀 Projects</h2>
+
+    <div class="project-container">
+
+        
+        <div class="project-card">
+
+            <h3>ATM Machine Transactions</h3>
+
+            <p class="project-desc">
+                Developed a Python-Based ATM Transaction System to Simulate real-time Banking Operations such as
+                Balance Enquiry,Cash-Withdrawal,Deposit,and PIN Validation.The System Ensures Secure user
+                Authentication and Maintains Accurate Transaction records.This Project Demonstrates Strong Skills in
+                Python logic,loops.
+
+            <h4>Key Features</h4>
+            <ul class="project-features">
+                <li>Pin Validation</li>
+                <li>Balance Inquiry System</li>
+                <li>Cash Withdrawal</li>
+                <li>Deposit Cash</li>
+            </ul>
+
+            <h4>Technologies Used</h4>
+            <div class="tech-stack">
+
+                <div class="tech">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+                    <span>Python</span>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h3>Quiz Management System</h3>
+
+            <p class="project-desc">
+                Developed a Python-Based Application to Create ,Manage, And Evaluate Quizzes . Implemented Features
+                Like User Authentication,Automated Scoring,And Performance Reports to Simplify The Quiz Process.            </p>
+
+            <h4>Key Features</h4>
+            <ul class="project-features">
+                <li>Login System</li>
+                <li>Quiz Creation & Management</li>
+                <li>Automatic Score Calculation</li>
+                <li>Performance Reports Dashboard</li>
+            </ul>
+
+            <h4>Technologies Used</h4>
+            <div class="tech-stack">
+
+                <div class="tech">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+                    <span>Python</span>
+                </div>
+
+                <div class="tech">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
+                    <span>MySQL</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        
+        <div class="project-card">
+
+            <h3>Calculator Web Application</h3>
+
+            <p class="project-desc">
+                I created a simple calculator web application using Django that allows users to perform basic operations
+                like addition, subtraction, multiplication, and division. The user enters two numbers on a web page, and the
+                data is sent to the Django Backend where the calculation is done using Python. The result is then displayed
+                on the same page. This project helped me understand how Django handles forms, views, and passing data
+                between the front-end and Backend.
+            </p>
+
+            <h4>Key Features</h4>
+            <ul class="project-features">
+                <li>Basic Arithmetic Operations</li>
+                <li>Real-time Result Display</li>
+                <li>Django Form Handling</li>
+                <li>Frontend-Backend Integration</li>
+            </ul>
+
+            <h4>Technologies Used</h4>
+            <div class="tech-stack">
+
+                <div class="tech">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+                    <span>Python</span>
+                </div>
+
+                <div class="tech">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+                    <span>HTML</span>
+                </div>
+
+                <div class="tech">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+                    <span>CSS</span>
+                </div>
+
+                <div class="tech">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg">
+                    <span>Django</span>
+                </div>
+
+            </div>
+
+        </div>
+
+      </div>
+    </section>
+    <section id="certification"  class="certt">
+        <h2>Certifications</h2>
+        <div class="cert">
+            <h3>Python Full Stack Developer</h3>
+            <p> I have successfully completed the Python Full Stack Developer training program at V Cubes Software
+                Solutions. This course covered both front-end and Backend technologies including Python, Django, HTML, CSS, JavaScript, and SQL. I gained hands-on experience in building web applications and
+                working with databases. This training enhanced my problem-solving abilities and coding skills through
+                practical projects. It provided a strong foundation to pursue a career as a Full Stack Developer.
+            </p>
+        </div>
+    </section>
+    <section class="contact-section" id="contact">
+    <h2>📬 Get In Touch</h2>
+
+        <div class="contact-card">
+
+            <div class="contact-item">
+                <span>📱</span>
+                <p>+91 8179824741</p>
+            </div>
+
+            <div class="contact-item">
+                <span>📧</span>
+                <a href="https://mail.google.com/mail/?view=cm&to=onlygodsb2k.741@gmail.com">Send Email</a>
+            </div>
+
+            <div class="contact-item">
+                <span>💻</span>
+                <a href="https://github.com/Manikantabatlanki/Projects">GitHub</a>
+            </div>
+
+            <div class="contact-item">
+                <span>🔗</span>
+                <a href="https://www.linkedin.com/in/manikanta-batlanki-617955362">LinkedIn</a>
+            </div>
+
+            <div class="contact-item">
+                <span>📍</span>
+                <p>Hyderabad, India</p>
+            </div>
+
+    </div>
+    </section>
+    <footer class="foot">
+        <p>&copy; <span id="year"></span>My 2026 Portfolio</p>
+    </footer>
+    <script src="{% static 'MyPortfolio/script.js' %}"></script>
+</body>
+</html>

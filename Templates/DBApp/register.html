@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {% for i in form %}
+           <p>{{i.label}}{{i}}{{i.errors}}</p>
+        {% endfor %}
+        <br>
+        <input type="submit" value="register">
+    </form>
+{% endblock %}

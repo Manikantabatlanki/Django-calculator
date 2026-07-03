@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block newcss %}
+    <link rel="stylesheet" href="{% static 'css/detail.css %'}">
+{% endblock %}
+{% block main %}
+<div class="data">
+      <p>Empoyee no:{{employee.empno}}</p>
+      <p>Empoyee name:{{employee.empname}}</p>
+      <p>Empoyee salary:{{employee.salary}}</p>
+      <p>department:{{employee.deptname}}</p>
+   
+</div>
+<div>
+    <h2>Previous employees</h2><br><br><br>
+    {% for prev_emp in previous %}
+    <div class="prev">
+        {% if prev_emp in previous %}
+          <img src="{{prev_emp.profile_pic.url}}" alt="">
+        {% endif %}
+    </div>
+        <p>{{prev_emp.empname}}</p>
+    {% endfor %}
+</div>
+{% endblock %}

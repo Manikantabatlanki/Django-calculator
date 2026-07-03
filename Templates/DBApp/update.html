@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block main %}
+     <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label>
+            Employee no
+            <input type="text" value="{{employee.empno}}" name="eno">
+        </label><br><br>
+         <label>
+            employee name
+            <input type="text" value="{{employee.empname}}" name="ename">
+        </label><br><br>
+        <label for="">
+            employee salary
+            <input type="text" value="{{employee.salary}}" name="esal">
+        </label><br><br>
+        <label for="">
+            profile pic
+            <input type="file" value="{{employee.profile_pic}}" name="epic">
+        </label><br><br>
+        <input type="submit" value="Update">
+     </form>
+     {% for msg in messages %}
+          <p>{{msg}}</p>
+     {% endfor %}
+{% endblock %}

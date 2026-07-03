@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/main33.css'%}">
+    </head>
+    <body>
+        <header>
+            <h1>VCube Application</h1>
+        </header>
+        <main>
+            <div class="box">
+                {% block main %}
+                {% endblock %}
+            </div>
+        </main>
+    </body>
+</html>

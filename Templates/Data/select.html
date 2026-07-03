@@ -1,0 +1,18 @@
+{% extends 'base1.html' %}
+
+{% block main %}
+    <table border="1" cellspacing="0">
+        <tr><th>Employee ID</th><th>Employee Name</th><th>Employee Salary</th><th>Department</th></tr>
+        {% for emp in employees %}
+           <tr><td><a href="{% url 'inserturl' %}">{{emp.empid}}</a></td><td><a href="{% url 'updateurl' emp.empid %}">{{emp.empname}}</a></td><td>{{emp.salary}}</td><td>{{emp.dept.deptname}}</td><td><a href="{% url 'deleteurl' emp.empid %}">Delete</a></td></tr>
+        {% endfor %}
+    </table><br>
+    <a href="{% url 'inserturl' %}">ADD Employee</a><br><br>
+    {% if employees.has_previous %}
+        <button><a href="{% url 'selecturl' employees.previous_page_number %}">Previous</a></button>
+    {% endif %}
+    {{employees.number}}
+    {% if employees.has_next %} 
+        <button> <a href="{% url 'selecturl' employees.next_page_number %}">Next</a></button>
+    {% endif %}
+{% endblock %}
